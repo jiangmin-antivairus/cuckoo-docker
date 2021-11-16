@@ -87,10 +87,11 @@ COPY community-master.tar.gz /root
 COPY sysinit.py /root
 COPY sysinit.sh /sysinit.sh
 COPY win7x64.xml /root
+COPY supervisord.conf /root
 RUN chmod +x /sysinit.sh
 
 # CMD [ "/sbin/init" ]
-CMD [ "sh /sysinit.sh" ]
+CMD [ "sh", "/sysinit.sh" ]
 
 # 安装布谷鸟
 #RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple jsonschema==2.6.0

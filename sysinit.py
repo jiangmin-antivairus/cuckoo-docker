@@ -176,3 +176,4 @@ if __name__ == '__main__':
     os.remove('/root/.cuckoo/conf/kvm.conf')
     modify_cuckoo_kvm_conf(win7x64_vm_num, 'win7x64', '192.168.122.1')
     modify_cuckoo_conf()
+    os.system('cp supervisord.conf /root/.cuckoo/supervisord.conf')
