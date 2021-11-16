@@ -1,0 +1,50 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="29">
+            <item index="0" class="java.lang.String" itemvalue="pycrypto" />
+            <item index="1" class="java.lang.String" itemvalue="Werkzeug" />
+            <item index="2" class="java.lang.String" itemvalue="wheel" />
+            <item index="3" class="java.lang.String" itemvalue="Flask-WTF" />
+            <item index="4" class="java.lang.String" itemvalue="SQLAlchemy" />
+            <item index="5" class="java.lang.String" itemvalue="psycopg2" />
+            <item index="6" class="java.lang.String" itemvalue="MarkupSafe" />
+            <item index="7" class="java.lang.String" itemvalue="gunicorn" />
+            <item index="8" class="java.lang.String" itemvalue="Flask-SQLAlchemy" />
+            <item index="9" class="java.lang.String" itemvalue="Jinja2" />
+            <item index="10" class="java.lang.String" itemvalue="Flask-Bootstrap" />
+            <item index="11" class="java.lang.String" itemvalue="ForgeryPy" />
+            <item index="12" class="java.lang.String" itemvalue="flask-login" />
+            <item index="13" class="java.lang.String" itemvalue="Flask-Migrate" />
+            <item index="14" class="java.lang.String" itemvalue="Flask" />
+            <item index="15" class="java.lang.String" itemvalue="boto3" />
+            <item index="16" class="java.lang.String" itemvalue="marshmallow" />
+            <item index="17" class="java.lang.String" itemvalue="redis" />
+            <item index="18" class="java.lang.String" itemvalue="kafka-python" />
+            <item index="19" class="java.lang.String" itemvalue="simplejson" />
+            <item index="20" class="java.lang.String" itemvalue="certifi" />
+            <item index="21" class="java.lang.String" itemvalue="thriftpy2" />
+            <item index="22" class="java.lang.String" itemvalue="pycryptodome" />
+            <item index="23" class="java.lang.String" itemvalue="PyMySQL" />
+            <item index="24" class="java.lang.String" itemvalue="ply" />
+            <item index="25" class="java.lang.String" itemvalue="Pillow" />
+            <item index="26" class="java.lang.String" itemvalue="happybase" />
+            <item index="27" class="java.lang.String" itemvalue="pymysql" />
+            <item index="28" class="java.lang.String" itemvalue="urllib3" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyStubPackagesAdvertiser" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="pika-stubs==0.1.3" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
