@@ -90,7 +90,7 @@ COPY win7x64.xml /root
 RUN chmod +x /sysinit.sh
 
 # CMD [ "/sbin/init" ]
-CMD [ "/sysinit.sh" ]
+CMD [ "sh /sysinit.sh" ]
 
 # 安装布谷鸟
 #RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple jsonschema==2.6.0

@@ -23,3 +23,5 @@ touch /.inited
 fi
 
 supervisord -c /root/.cuckoo/supervisord.conf
+
+tail -f /root/.cuckoo/logs/cuckoo.log
