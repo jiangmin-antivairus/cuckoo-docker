@@ -163,8 +163,8 @@ def import_cuckoo_community():
 
 
 if __name__ == '__main__':
-    # print('avas.:::::',os.environ.get('avas.cuckoo.win7x64.vm_num'))
-    # print('avas_:::::',os.environ.get('avas_cuckoo_win7x64_vm_num'))
+    print('avas.:::::',os.environ.get('avas.cuckoo.win7x64.vm_num'))
+    print('avas_:::::',os.environ.get('avas_cuckoo_win7x64_vm_num'))
     # 读取avas.cuckoo.win7x64.vm_num环境变量
     if os.getenv('avas.cuckoo.win7x64.vm_num') is None:
         win7x64_vm_num = 2
