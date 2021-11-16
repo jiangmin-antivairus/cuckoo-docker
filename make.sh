@@ -14,4 +14,4 @@ docker build -t cuckoo:$git_version .
 docker tag cuckoo:$git_version cuckoo:latest
 
 # 导出docker镜像
-# docker save -o cuckoo.tar cuckoo:$git_version
+docker save -o cuckoo.tar cuckoo:$git_version
