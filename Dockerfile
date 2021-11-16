@@ -81,6 +81,7 @@ RUN pip install -U cuckoo
 RUN pip install pyOpenSSL==18.0.0
 
 RUN apt-get install -y iputils-ping
+RUN apt-get install -y supervisorctl
 
 COPY community-master.tar.gz /root
 COPY sysinit.py /root

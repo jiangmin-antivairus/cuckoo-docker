@@ -104,6 +104,8 @@ def modify_cuckoo_kvm_conf(num, vm_os, resultserver_ip):
         'centos': 'linux',
     }
     config = ConfigParser()
+    if os.path.exists('/root/.cuckoo/conf/kvm.conf'):
+        config.read('/root/.cuckoo/conf/kvm.conf')
     config.add_section('kvm')
     config.set('kvm', 'dsn', 'qemu:///system')
     config.set('kvm', 'machines', ','.join([vm_os + '_' + str(i) for i in range(1, num + 1)]))
@@ -161,8 +163,16 @@ def import_cuckoo_community():
 
 
 if __name__ == '__main__':
-    create_vm(2, 'win7x64', vm_template_path='win7x64.xml')
+    # 读取avas.cuckoo.win7x64.vm_num环境变量
+    if os.environ.get('avas.cuckoo.win7x64.vm_num') is None:
+        win7x64_vm_num = 2
+    else:
+        win7x64_vm_num = int(os.environ.get('avas.cuckoo.win7x64.vm_num'))
+
+    create_vm(win7x64_vm_num, 'win7x64', vm_template_path='win7x64.xml')
     cuckoo_init()
     import_cuckoo_community()
-    modify_cuckoo_kvm_conf(2, 'win7x64', '192.168.122.1')
+    # 删除已有kvm.conf
+    os.remove('/root/.cuckoo/conf/kvm.conf')
+    modify_cuckoo_kvm_conf(win7x64_vm_num, 'win7x64', '192.168.122.1')
     modify_cuckoo_conf()
