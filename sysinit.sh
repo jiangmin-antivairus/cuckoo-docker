@@ -21,3 +21,5 @@ cd /root
 python sysinit.py
 touch /.inited
 fi
+
+supervisord -c /root/.cuckoo/supervisord.conf
