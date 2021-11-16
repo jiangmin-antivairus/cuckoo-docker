@@ -171,11 +171,11 @@ if __name__ == '__main__':
     else:
         win7x64_vm_num = int(os.getenv('avas.cuckoo.win7x64.vm_num'))
     print('win7x64虚拟机数量：' + str(win7x64_vm_num))
-    create_vm(win7x64_vm_num, 'win7x64', vm_template_path='win7x64.xml')
-    cuckoo_init()
-    import_cuckoo_community()
-    # 删除已有kvm.conf
-    os.remove('/root/.cuckoo/conf/kvm.conf')
-    modify_cuckoo_kvm_conf(win7x64_vm_num, 'win7x64', '192.168.122.1')
-    modify_cuckoo_conf()
-    os.system('cp supervisord.conf /root/.cuckoo/supervisord.conf')
+    # create_vm(win7x64_vm_num, 'win7x64', vm_template_path='win7x64.xml')
+    # cuckoo_init()
+    # import_cuckoo_community()
+    # # 删除已有kvm.conf
+    # os.remove('/root/.cuckoo/conf/kvm.conf')
+    # modify_cuckoo_kvm_conf(win7x64_vm_num, 'win7x64', '192.168.122.1')
+    # modify_cuckoo_conf()
+    # os.system('cp supervisord.conf /root/.cuckoo/supervisord.conf')
