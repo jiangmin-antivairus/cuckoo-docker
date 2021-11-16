@@ -17,7 +17,9 @@ if [ ! -f "/.inited" ]; then
   /usr/bin/mysql -uroot -proot -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root' WITH GRANT OPTION; FLUSH PRIVILEGES;"
   # 创建数据库
   /usr/bin/mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS cuckoo DEFAULT CHARSET utf8 COLLATE utf8_general_ci;"
+  echo "初始化mysql完毕"
   cd /root
+  echo "python sysinit.py"
   python sysinit.py
   touch /.inited
 fi
