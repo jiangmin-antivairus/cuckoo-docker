@@ -81,13 +81,13 @@ RUN pip install -U cuckoo
 RUN pip install pyOpenSSL==18.0.0
 
 RUN apt-get install -y iputils-ping
-RUN apt-get install -y supervisorctl
+RUN apt-get install -y supervisor
 
 COPY community-master.tar.gz /root
 COPY sysinit.py /root
 COPY sysinit.sh /sysinit.sh
 COPY win7x64.xml /root
-RUN chmod +x /entrypoint.sh
+RUN chmod +x /sysinit.sh
 
 # CMD [ "/sbin/init" ]
 CMD [ "bash" ]
