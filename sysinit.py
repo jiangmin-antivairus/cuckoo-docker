@@ -168,7 +168,7 @@ if __name__ == '__main__':
         win7x64_vm_num = 2
     else:
         win7x64_vm_num = int(os.environ.get('avas.cuckoo.win7x64.vm_num'))
-
+    print('win7x64虚拟机数量：' + str(win7x64_vm_num))
     create_vm(win7x64_vm_num, 'win7x64', vm_template_path='win7x64.xml')
     cuckoo_init()
     import_cuckoo_community()
