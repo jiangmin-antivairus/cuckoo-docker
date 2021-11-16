@@ -7,8 +7,8 @@ echo 'git_version:' $git_version
 echo $git_version > version
 
 # 制作docker镜像
-docker build -t cuckoo:$git_version .
+docker build --no-cache -t cuckoo:$git_version .
 docker tag cuckoo:$git_version cuckoo:latest
 
 # 导出docker镜像
-docker save -o cuckoo.tar cuckoo:$git_version
+# docker save -o cuckoo.tar cuckoo:$git_version
